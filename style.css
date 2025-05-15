@@ -1,0 +1,221 @@
+:root {
+    --Primary-color: blue;
+    --Seconday-color: #bababa;
+    --Nav-color: blue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header 1 */
+.header1 {
+    background-color: #eee;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.navbar-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.details span {
+    margin-right: 20px;
+    color: #333;
+    cursor:default;
+}
+
+.socialmedia i {
+    margin-left: 10px;
+    color: var(--Primary-color);
+    cursor: pointer;
+}
+
+/* Header 2 */
+.header2 {
+    background-color: var(--Nav-color);
+    padding: 15px 20px;
+    position: relative;
+}
+
+.navbar-second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.title span {
+    color: var(--Seconday-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.list-item {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.list-item li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact {
+    background: white;
+    color: var(--Primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Main Section */
+.mainbody {
+    background: url('./webpage.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-content h2 {
+    color: white;
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+.mainbody-btn {
+    margin-top: 20px;
+    position: relative;
+    padding: 10px 30px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+    z-index: 0;
+    transition: width 0.3s ease;
+}
+
+.mainbody-btn:hover .button-overlay {
+    width: 100%;
+}
+
+.mainbody-btn:hover .button-text {
+    color: var(--Primary-color);
+    position: relative;
+    z-index: 2;
+}
+
+.footer{
+    background-color: #eee;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.copyright{
+    font-size: small;
+color: #bababa;
+font-weight: 100;
+margin-bottom: 20px;
+}
+.contact :hover{
+    background-color: var(--Nav-color);
+    color: white;
+    font-size: 200px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+        flex-direction: column;
+        background-color: var(--Nav-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .sidebar.active {
+        display: flex;
+    }
+
+    .list-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact {
+        margin-top: 10px;
+    }
+
+    .main-content h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content h2 {
+        font-size: 20px;
+    }
+
+    .mainbody-btn {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 13px;
+    }
+}
