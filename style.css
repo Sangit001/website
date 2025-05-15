@@ -168,6 +168,8 @@
     text-align: center;
     align-items: center;
     margin-bottom: 100px;
+      margin-top: 20px;
+      font-size:13px;
   }
 
   .options_for_footer h3{
