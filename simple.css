@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family:lighter;
+  font-weight:lighter;
   background-color: #f3f3f3;
 /*   font-family: 'Roboto', sans-serif; */
   overflow-x: hidden;
